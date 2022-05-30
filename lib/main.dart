@@ -30,8 +30,8 @@ static final String title = 'Focused Popup Menu';
 }
 
 class MainPage extends StatefulWidget {
-  final String title;
-  const MainPage({ Key? key, required String title, required this.title }) : super(key: key);
+ // final String title;
+  const MainPage({ Key? key, required String title,   }) : super(key: key);
 
   @override
   State<MainPage> createState() => _MainPageState();
@@ -43,7 +43,24 @@ class _MainPageState extends State<MainPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: buildPages(),
-      
-    );
+      bottomNavigationBar: BottomNavigationBar(
+          currentIndex: index,
+          selectedItemColor: Colors.red,
+          backgroundColor: Colors.black,
+          unselectedItemColor: Colors.white70,
+          items: [
+            BottomNavigationBarItem(
+              icon: Text('PopupMenu', style: TextStyle(color: Colors.white)),
+              title: Text('Single'),
+            ),
+            BottomNavigationBarItem(
+              icon: Text('PopupMenu', style: TextStyle(color: Colors.white)),
+              title: Text('Multiple'),
+            ),
+          ],
+          onTap: (int index) => setState(() => this.index = index),
+        ),
+      );
+    
   }
 }
