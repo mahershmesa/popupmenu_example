@@ -61,6 +61,15 @@ class _MainPageState extends State<MainPage> {
           onTap: (int index) => setState(() => this.index = index),
         ),
       );
-    
+  }
+Widget buildPages() {
+    switch (index) {
+      case 0:
+        return SingleMenuWidget();
+      case 1:
+        return MultipleMenuWidget();
+      default:
+        return Container();
+    }
   }
 }
