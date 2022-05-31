@@ -19,7 +19,7 @@ class MultipleMenuWidget extends StatelessWidget {
   ];
 
   final urlImagess=[
-
+'https://images.unsplash.com/photo-1552774021-9ebbb764f03e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
   ];
 
   @override
@@ -33,13 +33,14 @@ class MultipleMenuWidget extends StatelessWidget {
             crossAxisSpacing: 12,
             mainAxisSpacing: 12,
             children: urlImages
-                .map((urlImage,) => buildCard(context, urlImage))
+                .map((urlImage,) => buildCard(context, urlImage,urlImagess))
                 .toList(),
+                
           ),
         ),
       );
 
-  Widget buildCard(BuildContext context, String urlImage) => FocusedMenuHolder(
+  Widget buildCard(BuildContext context, String urlImage, String urlImagess) => FocusedMenuHolder(
         menuItems: [
           FocusedMenuItem(
             title: Text('Favourite'),
