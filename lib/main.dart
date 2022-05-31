@@ -58,7 +58,7 @@ class _MainPageState extends State<MainPage> {
 Widget buildPages() {
     switch (index) {
       case 0:
-      //  return SingleMenuWidget();
+       return SingleMenuWidget();
       case 1:
         return MultipleMenuWidget();
       default:
