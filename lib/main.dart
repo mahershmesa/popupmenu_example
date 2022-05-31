@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:foucas/page/multiple_menu_widget.dart';
+import 'package:foucas/page/single_menu_widget.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,15 +15,6 @@ static final String title = 'Focused Popup Menu';
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
-        // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
         primarySwatch: Colors.blue,
       ),
       home: MainPage(title: title),
@@ -65,7 +58,7 @@ class _MainPageState extends State<MainPage> {
 Widget buildPages() {
     switch (index) {
       case 0:
-        return SingleMenuWidget();
+      //  return SingleMenuWidget();
       case 1:
         return MultipleMenuWidget();
       default:
